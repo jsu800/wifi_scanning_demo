@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 
+    <TextView
+        android:id="@+id/textViewRoomFound"
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+		android:layout_below="@+id/mapBackgroundView"
+        android:text="@string/room_found" />
+	-->
+
+  	<com.wifi.indoor.scanner.MapBackgroundView
+  	    android:id="@+id/mapBackgroundView"
+  	    android:layout_width="match_parent"
+  	    android:layout_height="match_parent"
+  	    android:layout_alignParentLeft="true"
+  	    android:layout_below="@+id/btnGetDirections" />
+
+    <ImageView
+      android:id="@+id/icon_current_location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:src="@drawable/starting_icon_blue"/>
+  
+  	<ImageView
+      android:id="@+id/icon_target_location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:src="@drawable/destination_location"/>
+
+  	<Button
+  	    android:id="@+id/btnGetDirections"
+  	    android:layout_width="match_parent"
+  	    android:layout_height="wrap_content"
+  	    android:layout_alignParentLeft="true"
+  	    android:layout_alignParentTop="true"
+  	    android:layout_marginTop="16dp"
+  	    android:background="@drawable/button_drawable"
+  	    android:paddingBottom="-10dp"
+  	    android:paddingTop="-10dp"
+  	    android:text="@string/directions"
+  	    android:textColor="#FFFFFF" />
+  	
+ </RelativeLayout>

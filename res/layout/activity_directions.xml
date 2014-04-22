@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textColor="#FFFFFF"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textViewDirections"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#87CEEB"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/directions"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/TextViewToLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewFromLocation"
+        android:layout_marginTop="27dp"
+        android:background="#87CEEB"
+        android:text="@string/directions_to"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnGetDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerLocations"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/button_drawable"
+        android:text="@string/route_me"
+        android:textColor="#FFFFFF" />
+
+    <Spinner
+        android:id="@+id/spinnerLocations"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextViewToLocation"
+        android:layout_marginTop="29dp"
+        android:entries="@array/room_array_demo" />
+
+    <TextView
+        android:id="@+id/textViewFromLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewFrom"
+        android:layout_marginTop="28dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewFrom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewDirections"
+        android:background="#87CEEB"
+        android:text="@string/directions_from"
+        android:textSize="20sp" />
+
+</RelativeLayout>

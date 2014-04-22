@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/textViewScanning1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewSampling" />
+
+        <Spinner
+            android:id="@+id/spinnerRooms1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:entries="@array/room_array_demo"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSampling"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/spinnerRooms1"
+            android:text="CALIBRATE" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewSampling"
+            android:layout_toRightOf="@+id/btnSampling"
+            android:enabled="false"
+            android:text="SAVE" />
+
+        <TextView
+            android:id="@+id/textViewSampling"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnSampling"
+            android:text="@string/select_calibrate_save"
+            android:textColor="#ff0000"
+            android:width="300dp" />
+
+
+        <Button
+            android:id="@+id/btnPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerRooms1"
+            android:layout_toLeftOf="@+id/btnWipeAll"
+            android:layout_toRightOf="@+id/btnSave"
+            android:text="Print" />
+
+    </RelativeLayout>
+
+</ScrollView>
